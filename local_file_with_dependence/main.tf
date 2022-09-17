@@ -1,8 +1,7 @@
 # Simple local_file resources with one dependent of the other
-# change the filename with your own path
 
 resource "local_file" "whale" {
-  filename = "/home/terraform/data/local/local_file_with_dependence/whale"
+  filename = "${path.module}/whale"
   content = "whale"
 
   depends_on = [
@@ -11,6 +10,6 @@ resource "local_file" "whale" {
 }
 
 resource "local_file" "krill" {
-  filename = "/home/terraform/data/local/local_file_with_dependence/krill"
+  filename = "${path.module}/krill"
   content = "krill"
 }

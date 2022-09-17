@@ -1,7 +1,8 @@
-# Simple local_file resource using variables in separate file variables.tf
-# change the filename with your own path on variables.tf
+# Simple local_file resource using variables in separate file variables.tf and locals.tf
+# variables.tf can't contain other variables like $path.module
+
 resource "local_file" "pet" {
-    filename = var.filename
+    filename = local.filename
     content = var.content
     file_permission = "0700"
 }
