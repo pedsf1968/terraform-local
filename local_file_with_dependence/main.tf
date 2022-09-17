@@ -1,5 +1,5 @@
 resource "local_file" "whale" {
-  filename = "/root/whale"
+  filename = "/home/terraform/data/local/local_file_with_dependence/whale"
   content = "whale"
 
   depends_on = [
@@ -8,6 +8,6 @@ resource "local_file" "whale" {
 }
 
 resource "local_file" "krill" {
-  filename = "/root/krill"
+  filename = "/home/terraform/data/local/local_file_with_dependence/krill"
   content = "krill"
 }
