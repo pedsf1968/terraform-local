@@ -1,1 +1,0 @@
-/home/terraform/data/local/local_file_with_count/pets.txt
